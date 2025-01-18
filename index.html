@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compactador e Descompactador de Log com Huffman</title>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Título -->
+        <div class="title">Compactador e Descompactador de Log com Huffman</div>
+
+        <!-- Container para as seções -->
+        <div class="container">
+            <!-- Seção de Compactação -->
+            <div class="section" id="compressSection">
+                <h1>Compactador de Log</h1>
+                <div class="file-input">
+                    <label for="logFileInput">Selecionar Arquivo</label>
+                    <input type="file" id="logFileInput" accept=".txt">
+                </div>
+                <div class="drag-drop-text">ou arraste e solte o arquivo aqui</div>
+                <div class="file-name" id="fileName">Nenhum arquivo selecionado</div>
+                <button id="compressBtn" disabled>Compactar e Baixar</button>
+            </div>
+
+            <!-- Seção de Descompactação -->
+            <div class="section" id="decompressSection">
+                <h1>Descompactador de Log</h1>
+                <div class="file-input">
+                    <label for="compressedFileInput">Selecionar Arquivo</label>
+                    <input type="file" id="compressedFileInput" accept=".json">
+                </div>
+                <div class="drag-drop-text">ou arraste e solte o arquivo aqui</div>
+                <div class="file-name" id="compressedFileName">Nenhum arquivo selecionado</div>
+                <button id="decompressBtn" disabled>Descompactar e Baixar</button>
+            </div>
+        </div>
+
+        <!-- Mensagem de status -->
+        <p id="status"></p>
+
+        <!-- Rodapé com créditos -->
+        <div class="footer">
+            Desenvolvido por <a href="https://github.com/seu-usuario" target="_blank">Samuel Gomes</a> e
+            <a href="https://github.com/seu-usuario" target="_blank">Yan Werlley</a> |
+            <a href="https://github.com/seu-usuario/nome-do-repositorio" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
