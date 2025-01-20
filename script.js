@@ -133,4 +133,57 @@ compressBtn.addEventListener("click", () => {
     };
 
     reader.readAsText(file);
+
+});
+
+// Descompactação
+const compressedFileInput = document.getElementById("compressedFileInput");
+const compressedFileNameDisplay = document.getElementById("compressedFileName");
+const decompressBtn = document.getElementById("decompressBtn");
+const decompressSection = document.getElementById("decompressSection");
+
+compressedFileInput.addEventListener("change", () => {
+    if (compressedFileInput.files.length > 0) {
+        compressedFileNameDisplay.textContent = compressedFileInput.files[0].name;
+        decompressBtn.disabled = false;
+    } else {
+        compressedFileNameDisplay.textContent = "Nenhum arquivo selecionado";
+        decompressBtn.disabled = true;
+    }
+});
+
+setupDragAndDrop(decompressSection, compressedFileInput, compressedFileNameDisplay, decompressBtn);
+
+decompressBtn.addEventListener("click", () => {
+    if (!compressedFileInput.files.length) {
+        status.textContent = "Por favor, selecione um arquivo compactado.";
+        return;
+    }
+
+    const file = compressedFileInput.files[0];
+    const reader = new FileReader();
+
+    reader.onload = () => {
+        try {
+            const { compressedLog, codes } = JSON.parse(reader.result);
+            const decompressedLog = decompressLog(compressedLog, codes);
+
+            // Criar e baixar o arquivo descompactado
+            const decompressedBlob = new Blob([decompressedLog], { type: "text/plain" });
+            const downloadLink = document.createElement("a");
+            downloadLink.href = URL.createObjectURL(decompressedBlob);
+            downloadLink.download = "log_decompressed.txt";
+            downloadLink.click();
+
+            status.textContent = "Arquivo descompactado gerado e baixado!";
+        } catch (error) {
+            status.textContent = "Erro ao processar o arquivo compactado.";
+        }
+    };
+
+    reader.onerror = () => {
+        status.textContent = "Erro ao ler o arquivo.";
+    };
+
+    reader.readAsText(file);
 });
