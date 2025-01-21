@@ -1,45 +1,34 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Questões - Juíz Online
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 29<br>
+**Conteúdo da Disciplina**: Greed<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+| Matrícula  | Aluno                               |
+| ---------- | ----------------------------------- |
+| 21/1030649 | Yan Werlley de Freitas Paulo |
+| 21/1030881 | Samuel Gomes de Souza         |
+
+## Apresentação
+
+A apresentação pode ser vista [aqui]().
+
+## Sobre
+
+Este projeto consiste na realização de um projeto utilizando o Greed.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
 
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+## Instalação
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+**Linguagem**: Javascript <br>
 
-## Outros 
+## Uso
+
+Para executar os códigos, é recomendado clicar no link do problema que direciona para o LeetCode e rodar o código diretamente na plataforma.
+<!--## Outros
+
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 
-
-
-
+-->
